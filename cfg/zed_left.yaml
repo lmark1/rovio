@@ -1,0 +1,13 @@
+###### Camera Calibration File ######
+image_width: 1920
+image_height: 1080
+camera_name: zed
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1400.09, 0.0, 1020.13, 0.0, 1400.09, 493.379, 0.0, 0.0, 1.0]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.171543, 0.0240596, 0.0, 0.0, 0.0]

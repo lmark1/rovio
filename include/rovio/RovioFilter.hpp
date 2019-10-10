@@ -175,6 +175,7 @@ class RovioFilter:public LWF::FilterBase<ImuPrediction<FILTERSTATE>,
   /** \brief Reloads the camera calibration for all cameras and resets the depth map type.
    */
   void refreshProperties(){
+    std::cout << "REFERESH" << std::endl;
     if(std::get<0>(mUpdates_).useDirectMethod_){
       init_.mode_ = LWF::ModeIEKF;
     } else {

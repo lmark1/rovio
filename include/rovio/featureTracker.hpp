@@ -112,7 +112,7 @@ class FeatureTrackerNode{
     try {
       cv_ptr = cv_bridge::toCvCopy(img_msg, sensor_msgs::image_encodings::TYPE_8UC1);
     } catch (cv_bridge::Exception& e) {
-      ROS_ERROR("cv_bridge exception: %s", e.what());
+      ROS_ERROR("feature tracker - cv_bridge exception: %s", e.what());
       return;
     }
     cv_ptr->image.copyTo(img_);

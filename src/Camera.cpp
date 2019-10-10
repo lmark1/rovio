@@ -48,6 +48,7 @@ namespace rovio{
   }
 
   void Camera::load(const std::string& filename){
+    std::cout << "Loading: " << filename << std::endl;
     YAML::Node config = YAML::LoadFile(filename);
     std::string distortionModel;
     distortionModel = config["distortion_model"].as<std::string>();

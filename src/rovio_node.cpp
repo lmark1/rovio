@@ -94,6 +94,7 @@ int main(int argc, char** argv){
   std::string filter_config = rootdir + "/cfg/rovio.info";
 
   nh_private.param("filter_config", filter_config, filter_config);
+  std::cout << filter_config << std::endl;
 
   // Filter
   std::shared_ptr<mtFilter> mpFilter(new mtFilter);
@@ -105,6 +106,7 @@ int main(int argc, char** argv){
     if (nh_private.getParam("camera" + std::to_string(camID)
                             + "_config", camera_config)) {
       mpFilter->cameraCalibrationFile_[camID] = camera_config;
+      std::cout << camera_config << std::endl;
     }
   }
   mpFilter->refreshProperties();
@@ -114,6 +116,7 @@ int main(int argc, char** argv){
   rovioNode.makeTest();
 
 #ifdef MAKE_SCENE
+  std::cout << "Making scene" << std::endl;
   // Scene
   std::string mVSFileName = rootdir + "/shaders/shader.vs";
   std::string mFSFileName = rootdir + "/shaders/shader.fs";
