@@ -8,18 +8,18 @@
     <remap from="cam0/image_raw" to="/camera/image"/>
   </node-->
 
-  <node  pkg="rovio" type="rovio_node" name="rovio" output="screen">
+  <!--node  pkg="rovio" type="rovio_node" name="rovio" output="screen">
     <param name="filter_config" value="$(find rovio)/cfg/realsense.info"/>
     <param name="camera0_config" value="$(find rovio)/cfg/realsense.yaml"/>
 
     <remap from="imu0" to="/mavros/imu/data"/>
     <remap from="cam0/image_raw" to="/camera/image"/>
-  </node>
+  </node-->
 
-  <!--node pkg="rovio" type="rovio_node" name="rovio" output="screen">
+  <node pkg="rovio" type="rovio_node" name="rovio" output="screen">
     <param name="filter_config" value="$(find rovio)/cfg/rovio.info"/>
     <param name="camera0_config" value="$(find rovio)/cfg/euroc_cam0.yaml"/>
     <param name="camera1_config" value="$(find rovio)/cfg/euroc_cam1.yaml"/>
-  </node-->
+  </node>
 
 </launch>
